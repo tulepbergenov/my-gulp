@@ -1,0 +1,34 @@
+html {
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  scroll-behavior: smooth;
+  text-rendering: optimizespeed;
+}

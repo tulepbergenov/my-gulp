@@ -1,0 +1,9 @@
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --w-container: 992px;
+  --p-container: 25px;
+
+  --fz: 1.8rem;
+}
