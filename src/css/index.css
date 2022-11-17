@@ -1,3 +1,13 @@
+:root {
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --w-container: 992px;
+  --p-container: 25px;
+
+  --fz: 1.8rem;
+}
+
 html {
   box-sizing: border-box;
 
@@ -44,12 +54,28 @@ body {
 
   color: var(--clr-black);
   font-weight: 400;
-  font-size: 1.8rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: calc(28 / 18 * 100%);
+  font-size: var(--fz-global);
+  font-family: system-ui;
+  line-height: calc(var(--fz-global) * 1.333);
 
   background-color: var(--clr-white);
   scroll-behavior: smooth;
   text-rendering: optimizespeed;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class$="__container"] {
+  max-width: calc(var(--w-container) + (var(--p-container) * 2));
+  margin: 0 auto;
+  padding: 0 var(--p-container);
 }
