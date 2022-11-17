@@ -18,8 +18,8 @@ const paths = {
   },
 
   css: {
-    src: pathSrc + "/css/*.{scss,sass}",
-    watch: pathSrc + "/css/**/*.{scss,sass}",
+    src: pathSrc + "/css/*.css",
+    watch: pathSrc + "/css/**/*.css",
     dist: pathDist + "/assets/css",
   },
 
@@ -106,17 +106,15 @@ const html = () => {
 };
 
 // CSS
-import coreSass from "sass";
-import gulpSass from "gulp-sass";
-const sass = gulpSass(coreSass);
-
 import postCss from "gulp-postcss";
+import postCssImport from "postcss-import";
 import postCssCsso from "postcss-csso";
 import postCssSortMediaQueries from "postcss-sort-media-queries";
 import autoprefixer from "autoprefixer";
 
 const css = () => {
   const postCssPlugins = [
+    postCssImport(),
     postCssSortMediaQueries(settings.css.postCssSortMediaQueries),
     autoprefixer(),
     postCssCsso(),
@@ -131,7 +129,6 @@ const css = () => {
         })),
       })
     )
-    .pipe(sass())
     .pipe(postCss(postCssPlugins))
     .pipe(dest(paths.css.dist));
 };
@@ -250,6 +247,8 @@ const server = () => {
     },
   });
 };
+
+export { css };
 
 // Scripts
 const build = series(clear, parallel(html, css, js, img, fonts, libs, meta));
