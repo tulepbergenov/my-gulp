@@ -1,0 +1,38 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-rational-order"
+  ],
+  "plugins": ["stylelint-order", "stylelint-config-rational-order/plugin"],
+  "rules": {
+    "no-empty-source": null,
+    "declaration-empty-line-before": null,
+    "order/properties-order": [],
+    "plugin/rational-order": [
+      true,
+      {
+        "empty-line-between-groups": true
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["extends", "tailwind"]
+      }
+    ],
+    "block-no-empty": null,
+    "unit-allowed-list": [
+      "fr",
+      "rem",
+      "px",
+      "%",
+      "s",
+      "ms",
+      "em",
+      "deg",
+      "vh",
+      "vw",
+      "vmin"
+    ]
+  }
+}

@@ -26,6 +26,10 @@
     "gulp-ttf2woff2": "^4.0.1",
     "postcss-csso": "^6.0.0",
     "postcss-sort-media-queries": "^4.2.1",
-    "sass": "^1.54.3"
+    "sass": "^1.54.3",
+    "stylelint": "^14.15.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-order": "^5.0.0"
   }
 }
