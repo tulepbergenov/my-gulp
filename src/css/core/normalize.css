@@ -3,6 +3,7 @@ html {
 
   font-size: 62.5%;
   text-size-adjust: 100%;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -29,6 +30,5 @@ body {
 body {
   margin: 0;
 
-  scroll-behavior: smooth;
   text-rendering: optimizespeed;
 }
