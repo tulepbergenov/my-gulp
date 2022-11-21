@@ -248,7 +248,7 @@ const server = () => {
   });
 };
 
-export { css };
+export { html, css, js, img, fonts, libs, meta };
 
 // Scripts
 const build = series(clear, parallel(html, css, js, img, fonts, libs, meta));
